@@ -1,0 +1,77 @@
+name: Build and release modpack
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+
+      - name: Get version from pakku.json
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' pakku.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Modpack version: $VERSION"
+
+      - name: Download latest Pakku
+        run: |
+          RELEASE_JSON=$(curl -sL https://api.github.com/repos/juraj-hrivnak/Pakku/releases/latest)
+          JAR_URL=$(echo "$RELEASE_JSON" | jq -r '.assets[] | select(.name == "pakku.jar") | .browser_download_url')
+          echo "Downloading Pakku from $JAR_URL"
+          curl -sL -o pakku.jar "$JAR_URL"
+
+      - name: Pakku fetch
+        run: java -jar pakku.jar fetch
+
+      - name: Pakku export
+        run: java -jar pakku.jar export
+
+      - name: Create client zip (mods, shaderpacks, config)
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          ZIP_NAME="wietpack-${VERSION}.zip"
+          INCLUDED=""
+          for dir in mods shaderpacks config; do [ -d "$dir" ] && INCLUDED="$INCLUDED $dir"; done
+          zip -r "$ZIP_NAME" $INCLUDED -x "*.git*"
+          echo "client_zip=$ZIP_NAME" >> $GITHUB_ENV
+
+      - name: Prepare release assets
+        id: assets
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          RELEASE_FILES="${{ env.client_zip }}"
+          # Copy and rename serverpack zip
+          SERVERPACK=$(find build/serverpack -maxdepth 1 -name "*.zip" -type f 2>/dev/null | head -1)
+          if [ -n "$SERVERPACK" ]; then
+            cp "$SERVERPACK" "serverpack-${VERSION}.zip"
+            RELEASE_FILES="$RELEASE_FILES,serverpack-${VERSION}.zip"
+          fi
+          # Copy and rename modrinth mrpack
+          MODRINTH=$(find build/modrinth -maxdepth 1 -name "*.mrpack" -type f 2>/dev/null | head -1)
+          if [ -n "$MODRINTH" ]; then
+            cp "$MODRINTH" "modrinth-${VERSION}.mrpack"
+            RELEASE_FILES="$RELEASE_FILES,modrinth-${VERSION}.mrpack"
+          fi
+          echo "files=$RELEASE_FILES" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: v${{ steps.version.outputs.version }}
+          files: ${{ steps.assets.outputs.files }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
