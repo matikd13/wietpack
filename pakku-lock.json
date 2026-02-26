@@ -2041,7 +2041,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "friendsandfoes-neoforge-4.0.19+mc1.21.1.jar",
+                    "file_name": "friendsandfoes-neoforge-4.0.21+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -2050,19 +2050,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/BOCJKD49/versions/NnFqSVY0/friendsandfoes-neoforge-4.0.19+mc1.21.1.jar",
-                    "id": "NnFqSVY0",
+                    "url": "https://cdn.modrinth.com/data/BOCJKD49/versions/55rPdULV/friendsandfoes-neoforge-4.0.21+mc1.21.1.jar",
+                    "id": "55rPdULV",
                     "parent_id": "BOCJKD49",
                     "hashes": {
-                        "sha512": "42e388ea32aaafde3b8cab0f2fe5513d13b15a06f02a05190610b3ec4927e9312c26c1fa3886eca78040e53f299cbc19e8af42996cf88db5d890c4c6f2fabbc3",
-                        "sha1": "800724b0d5b70e26633bb3eb53748547207db67c"
+                        "sha512": "c4361fa50c7d1ebc667ccbee636a7493e2fe755618d009ae507b9d33eea69173da324576d568b71f185046444e68ce2e065f183bde94d8511fd3faf4b7d8d364",
+                        "sha1": "3d231246dbe10af5af65ca7b4933e74b2fa55b6d"
                     },
                     "required_dependencies": [
                         "1eAoo2KR",
                         "G1hIVOrD"
                     ],
-                    "size": 4982527,
-                    "date_published": "2025-12-30T11:54:20.293720Z"
+                    "size": 4982243,
+                    "date_published": "2026-02-26T11:34:18.519109Z"
                 }
             ]
         },
@@ -2155,7 +2155,7 @@
         {
             "pakku_id": "oOtz8jQnk9oIcknw",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "geckolib"
             },

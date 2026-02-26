@@ -1,7 +1,10 @@
 {
-    "name": "wietpack",
-    "version": "1.0.0",
-    "overrides": [
-        "config"
-    ]
+  "name": "wietpack",
+  "version": "1.0.0",
+  "overrides": ["config"],
+  "projects": {
+    "geckolib": {
+      "side": "BOTH"
+    }
+  }
 }
