@@ -3709,45 +3709,6 @@
             ]
         },
         {
-            "pakku_id": "oVWnyZTWv2fgjcJR",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "moanimals"
-            },
-            "name": {
-                "modrinth": "More Animals"
-            },
-            "id": {
-                "modrinth": "QQAM7AG8"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "MoAnimals-neoforge-0.1.0-BETA.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/QQAM7AG8/versions/UyPqyRKa/MoAnimals-neoforge-0.1.0-BETA.jar",
-                    "id": "UyPqyRKa",
-                    "parent_id": "QQAM7AG8",
-                    "hashes": {
-                        "sha512": "2bf97db21ac39bb9304de37ec99f01c1da8506e6102bf54cecf1e50849ea47edbcd9ecf5faf2921d6b7aa00c7520ae1ff7171c721cf8120db5203f1fc7baac75",
-                        "sha1": "8d057efb04fc19c82ee2b628dd9f9d97e6635840"
-                    },
-                    "required_dependencies": [
-                        "lhGA9TYQ"
-                    ],
-                    "size": 480657,
-                    "date_published": "2026-01-09T20:13:55.701274Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "DDmQprCAVY3yP9hq",
             "type": "MOD",
             "side": "BOTH",

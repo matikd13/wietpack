@@ -1,5 +1,0 @@
-[
-  {"version":1},
-  {"ingredient":{"id":"draconicevolution:chaotic_pickaxe","components":{"draconicevolution:module_entities":[],"draconicevolution:config_properties":[["DECIMAL",{"value":1.0,"min":0.0,"max":1.0,"formatter":"percent_1","name":"mining_speed","show_on_hud":true}]],"draconicevolution:provider_identity":[633099116,-599768837,-1932466231,-341515530]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"draconicevolution:draconic_sword","components":{"draconicevolution:module_entities":[],"draconicevolution:config_properties":[],"draconicevolution:provider_identity":[365951891,50415169,-1420389226,20732711]}},"type":"item_stack","bookmarkType":"INGREDIENT"}
-]
