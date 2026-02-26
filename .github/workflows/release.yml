@@ -55,14 +55,14 @@ jobs:
           # Copy and rename serverpack zip
           SERVERPACK=$(find build/serverpack -maxdepth 1 -name "*.zip" -type f 2>/dev/null | head -1)
           if [ -n "$SERVERPACK" ]; then
-            cp "$SERVERPACK" "serverpack-${VERSION}.zip"
-            RELEASE_FILES="$RELEASE_FILES,serverpack-${VERSION}.zip"
+            cp "$SERVERPACK" "wietpack-server-${VERSION}.zip"
+            RELEASE_FILES="$RELEASE_FILES,wietpack-server-${VERSION}.zip"
           fi
           # Copy and rename modrinth mrpack
           MODRINTH=$(find build/modrinth -maxdepth 1 -name "*.mrpack" -type f 2>/dev/null | head -1)
           if [ -n "$MODRINTH" ]; then
-            cp "$MODRINTH" "modrinth-${VERSION}.mrpack"
-            RELEASE_FILES="$RELEASE_FILES,modrinth-${VERSION}.mrpack"
+            cp "$MODRINTH" "wietpack-modrinth-${VERSION}.mrpack"
+            RELEASE_FILES="$RELEASE_FILES,wietpack-modrinth-${VERSION}.mrpack"
           fi
           echo "files=$RELEASE_FILES" >> $GITHUB_OUTPUT
 
