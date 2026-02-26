@@ -4224,6 +4224,82 @@
             ]
         },
         {
+            "pakku_id": "GsJyh6BnT0jDbVec",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "sophisticated-backpacks"
+            },
+            "name": {
+                "modrinth": "Sophisticated Backpacks"
+            },
+            "id": {
+                "modrinth": "TyCTlI4b"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sophisticatedbackpacks-1.21.1-3.25.28.1537.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/CYOnGzwN/sophisticatedbackpacks-1.21.1-3.25.28.1537.jar",
+                    "id": "CYOnGzwN",
+                    "parent_id": "TyCTlI4b",
+                    "hashes": {
+                        "sha512": "4c34a25ed054e7a931ac7945a9c7f8830e4b8b9e9402011cd389ba785b9e560d4a0e928733e2d0ebef8fb6207dd828cb27fc760ddecc543b3afbe5147b695855",
+                        "sha1": "0171d79ea3ff01ab16c32494fc72514518bc4854"
+                    },
+                    "required_dependencies": [
+                        "nmoqTijg"
+                    ],
+                    "size": 986514,
+                    "date_published": "2026-02-18T20:31:12.700834Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "aNoTfF7HfBWtTkqS",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "sophisticated-core"
+            },
+            "name": {
+                "modrinth": "Sophisticated Core"
+            },
+            "id": {
+                "modrinth": "nmoqTijg"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sophisticatedcore-1.21.1-1.4.5.1499.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/qi2pvRvC/sophisticatedcore-1.21.1-1.4.5.1499.jar",
+                    "id": "qi2pvRvC",
+                    "parent_id": "nmoqTijg",
+                    "hashes": {
+                        "sha512": "abed32b266c999ee4e3989ef9570102f93b92ec9af8dcdc46feef8ccb8f5858284706f2d783480450657452fed0175b3a8c742407a4412fade0f71dbfdfba493",
+                        "sha1": "fb75fe25d174b9c72246d805038b5d49b1d865fa"
+                    },
+                    "required_dependencies": [],
+                    "size": 1461903,
+                    "date_published": "2026-02-16T19:06:22.018189Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "gnQrgvSMNapwsghZ",
             "type": "MOD",
             "side": "BOTH",
