@@ -1,0 +1,5 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"adorablehamsterpets:acorn"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:andesite"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

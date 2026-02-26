@@ -1,0 +1,7 @@
+{
+    "name": "wietpack",
+    "version": "1.0.0",
+    "overrides": [
+        "config"
+    ]
+}
